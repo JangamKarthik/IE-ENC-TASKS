@@ -1,0 +1,51 @@
+/*Input
+The first line indicates the door through which the very important person entered the elevator. It contains "front" if the person enters the elevator through the front door and "back" if he entered the elevator through the back door. The second line contains integer a (1 ≤ a ≤ 2) which denotes the number of the rail at which the person was holding.
+
+Output
+Print character "R" if the VIP is right-handed or "L" if he is left-handed.
+*/
+
+import java.util.Scanner;
+
+import java.util.*;
+public class elevator120A {
+    static void check (String s,int g){
+        String a="front";
+        String f="back";
+
+        if(a.equals(s) && g==1){
+            System.out.println("L");
+        }
+
+        else if(a.equals(s) && g==2){
+            System.out.println("R");
+        }
+
+        else if(f.equals(s) && g==1){
+            System.out.println("R");
+        }
+
+        else if(f.equals(s) && g==2){
+            System.out.println("L");
+        }
+
+        else{
+            System.out.println("please give the correct input");
+        }
+    }
+
+    public static void main(String[] args) {
+    
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("ENTER THE ENTERING SIDE OF THE LIFT");
+        
+        String k=sc.nextLine();
+        
+        System.out.println("ENTER THE RAIL SIDE");
+        
+        int f=sc.nextInt();
+        
+        check(k,f);
+    }
+}
